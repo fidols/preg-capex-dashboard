@@ -296,3 +296,68 @@ Despite Procore and Yardi, Excel is where CapEx analysis actually happens:
 | **Portfolio CapEx summary** | Leadership-facing: all projects, spend-to-date, remaining, variance %, projected completion |
 | **Variance analysis** | Month-over-month, budget vs. actual, cost driver identification |
 | **Cost-to-complete tracker** | % complete × original budget, adjusted for approved COs |
+
+---
+
+## 5. LIHTC and Affordable Housing Finance Basics
+
+*PREG's portfolio is >90% affordable/workforce housing. Understanding this is table stakes for the interview.*
+
+### What is LIHTC?
+The **Low Income Housing Tax Credit (LIHTC)** is the primary federal tool for financing affordable rental housing. Created by the Tax Reform Act of 1986 (Section 42 of the tax code). Run by the IRS, allocated by state housing finance agencies.
+
+### How It Works (The Simple Version)
+1. Developer proposes an affordable housing project
+2. State housing agency allocates tax credits to the project
+3. Developer sells those credits to investors (typically banks) for cash upfront — usually $0.90–$0.95 per $1 of credit
+4. That cash becomes the equity in the deal, reducing the debt load
+5. In exchange, the property must keep rents affordable for income-qualified tenants for 15–30 years
+
+### Two Types of Credits
+
+| Type | How You Get It | Subsidy Level | Typical Use |
+|---|---|---|---|
+| **9% Credit** | Competitive state allocation (QAP) | Larger (~70% of eligible basis) | New construction, substantial rehabilitation |
+| **4% Credit** | Non-competitive, paired with tax-exempt bonds | Smaller (~30% of eligible basis) | Bond-financed acquisition/rehab |
+
+**PREG context:** Viewcrest Village (Bremerton, WA) is a confirmed 4% / bond-financed LIHTC asset. PREG's 2011 LIHTC program entry suggests they started with acquisition/rehab (4% credit deals) before moving into complex structures.
+
+### AMI Tiers (Income Limits)
+LIHTC properties restrict rents to tenants earning below a % of Area Median Income (AMI):
+- **50% AMI** — deepest affordability, lowest rents, typically 9% credit requirements
+- **60% AMI** — standard LIHTC maximum for 9% credits
+- **80% AMI** — common in workforce housing / Affordable Conversion structures
+- **140% AMI** — NOT standard LIHTC; signals workforce housing or Essential Living Program (see Tribute Verdae note in Section 1)
+
+### PREG's Three Affordable Housing Strategies
+
+| Strategy | % of Portfolio | What It Means for CapEx |
+|---|---|---|
+| **LIHTC (37.34%)** | Direct tax credit properties | CapEx must comply with Section 42 regulatory agreements; timelines tied to credit compliance periods |
+| **Affordable Conversion (52.53%)** | Market-rate properties converted to long-term affordability via HAP contracts or regulatory agreements | CapEx must preserve affordability covenants; rent increase upside is limited, so ROI calculus is different |
+| **Bond Financed (6.96%)** | Tax-exempt municipal bonds + 4% credits | Similar compliance to LIHTC; CapEx budget often underwritten at acquisition with bond proceeds |
+
+### What LIHTC Means for CapEx Analysis (Interview-Critical)
+
+1. **Compliance periods constrain timing** — CapEx during the 15-year initial compliance period must not violate the regulatory agreement. Major scope changes may require state housing agency approval.
+
+2. **Year 15 exit decision** — After the initial 15-year compliance period, the investor's tax credit interest can be bought out. PREG faces decisions at each Year 15: extend compliance, convert to workforce housing, or recapitalize. Every CapEx dollar deployed in Year 10–14 must pencil against this exit horizon.
+
+3. **Viewcrest Village specific** — restrictions run to 2032 (six years from today). Any CapEx deployed now must make sense against a 2032 decision point on extension vs. conversion. This is a live strategic pressure at PREG right now.
+
+4. **HAP Contracts** — Housing Assistance Payments contracts (HUD-funded rental subsidies) exist on many of PREG's Affordable Conversion properties. HAP contracts guarantee rent payments from HUD but also impose inspection and maintenance standards — CapEx must maintain the property to HUD's physical standards or subsidy payments are at risk.
+
+5. **Lower NOI = less margin for error** — Affordable properties operate with rent restrictions, so NOI is structurally lower than market-rate. Budget overruns on CapEx are felt more acutely. Precision in forecasting is not optional.
+
+### LIHTC vs. Affordable Conversion vs. Bond Financed — Quick Reference
+
+| | LIHTC | Affordable Conversion | Bond Financed |
+|---|---|---|---|
+| Federal program | Yes (Section 42) | Varies (HAP, ground lease, regulatory agreement) | Yes (tax-exempt bonds + 4% credit) |
+| Compliance period | 15–30 years | Contract term (varies) | 30+ years (bond term) |
+| Income limits | 50–60% AMI | 60–80% AMI typical | 50–60% AMI |
+| CapEx restrictions | Regulatory agreement | Covenant / HAP standards | Bond covenants + regulatory agreement |
+| Year 15 event | Investor buyout option | N/A | Bond maturity / refinance |
+
+### GIS / Community Context
+PREG invests heavily in communities with genuine housing need. The spatial analysis work Fidel did (mapping food access deserts in LA County using ArcGIS Pro) is directly adjacent to how affordable housing developers think about capital deployment — identifying underserved geographies and community impact. This is a natural bridge if the affordable housing mission comes up.
