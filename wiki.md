@@ -231,3 +231,68 @@ At most real estate companies, the CapEx analyst works with third-party GCs — 
 | **Yardi** | Real estate ERP — source of financial truth | You reconcile against Procore monthly |
 | **Entrata** | Multifamily PM platform | Leasing and operations data; relevant for unit turnover CapEx timing |
 | **AppFolio** | Alternative PM platform (used by some operators) | Mentioned for awareness; PREG uses Entrata/Yardi |
+
+---
+
+## 4. Procore and Yardi — Conceptual Workflows
+
+*Note: No direct hands-on experience with either yet. These are the conceptual workflows — the data logic transfers from Python/Excel experience. Frame to Adam as: "I understand what each system does and I pick up platforms quickly."*
+
+### Procore
+Procore is construction project management software — the source of truth for what is happening on the construction side.
+
+**What the Financial Analyst uses Procore for:**
+- **View project budgets** — original contract broken down by cost code; see committed vs. actual by line item
+- **Track change orders** — each CO has a status (pending → approved/rejected); approved COs increase committed costs and must be reflected in forecasts immediately
+- **Review pay applications** — contractors submit monthly; Procore routes them for approval; pay app amount and approved CO total must reconcile
+- **Pull cost reports** — budget vs. actual by cost code, project, or portfolio-wide
+- **Monitor RFIs and submittals** — not directly a financial task, but delays here cause schedule slippage that affects cost-to-complete timing
+
+**Key mental model:** Procore is the construction source of truth. Numbers here reflect what 1st Call and subcontractors say is happening on the ground.
+
+### Yardi
+Yardi is the real estate ERP — the source of truth for what actually happened financially.
+
+**What the Financial Analyst uses Yardi for:**
+- **Verify actual payments** — AP entries confirm money left the bank; a pay app approved in Procore should appear as a payment posted in Yardi
+- **Code expenses** — CapEx transactions get coded to the right property, cost center, and GL account
+- **Pull financial reports** — trial balance, GL detail, project cost reports by property
+- **Support month-end close** — CapEx accruals, reclassifications, reconciliation against Procore actuals
+
+**Key mental model:** Yardi is the financial source of truth. Numbers here are what actually happened, not what contractors claim.
+
+### Procore ↔ Yardi Reconciliation (Core Analyst Skill)
+
+This reconciliation is a central daily/weekly function:
+
+| Procore | Yardi | If They Don't Match → |
+|---|---|---|
+| Pay app approved: $250K | AP payment posted: $250K | ✅ Clean |
+| CO approved: +$45K budget increase | GL entry: +$45K to CapEx account | ✅ Clean |
+| Pay app approved: $250K | AP payment: $180K | ❌ Investigate: timing delay? partial payment? coding error? |
+| CO approved (internal notes only) | No GL entry | ❌ Missing entry — needs to be posted |
+
+**Common failure modes to know:**
+- **Timing mismatch** — pay app approved late December, payment posts in January; accrual needed for year-end close
+- **Coding error** — payment posted to wrong property or wrong cost center; shows as variance on one property, undercount on another
+- **Unapproved payment** — money left the bank without a corresponding approved Procore document
+- **Missing CO** — Yardi shows higher spend than Procore's approved budget; either a CO wasn't logged or a cost was miscoded
+
+### Entrata
+Used primarily by TAM Residential (PREG's property management arm) for leasing, rent collection, and resident management.
+
+**Financial Analyst relevance:**
+- Unit turnover timing — when a unit undergoes CapEx (renovation), Entrata shows when it goes back online and at what rent; links CapEx spend to revenue recovery timeline
+- Rent roll data — helps validate NOI projections after a value-add CapEx program
+- Move-out/move-in data — informs how many units are in CapEx cycle at any given time
+
+### Excel — Still the Core Tool
+Despite Procore and Yardi, Excel is where CapEx analysis actually happens:
+
+| What You Build in Excel | Why |
+|---|---|
+| **CapEx forecast model** | Roll up committed + actual + remaining by project; scenario planning |
+| **Change order log** | Running tracker: CO number, contractor, scope, $ requested, status, approval date, budget impact |
+| **Portfolio CapEx summary** | Leadership-facing: all projects, spend-to-date, remaining, variance %, projected completion |
+| **Variance analysis** | Month-over-month, budget vs. actual, cost driver identification |
+| **Cost-to-complete tracker** | % complete × original budget, adjusted for approved COs |
