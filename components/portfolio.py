@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from styles.theme import PREG_BLUE, PREG_LIGHT_BLUE
+from styles.theme import PREG_BLUE, PREG_LIGHT_BLUE, section_banner
 
 
 def render_portfolio_tab(df: pd.DataFrame) -> None:
-    st.subheader("Portfolio Overview")
+    section_banner("CapEx Dashboard", "Portfolio Overview")
 
     display_df = df[[
         "project_name", "city", "state", "units", "asset_type",
@@ -42,7 +42,7 @@ def render_portfolio_tab(df: pd.DataFrame) -> None:
         st.info(f"Selected: **{st.session_state.selected_project}** — switch to Project Detail tab to drill in.")
 
     st.divider()
-    st.subheader("Budget vs. Actual Spend by Project")
+    section_banner("Portfolio Analysis", "Budget vs. Actual Spend by Project")
 
     chart_df = df[["project_name", "original_budget", "actual_spend"]].copy()
     chart_df = chart_df.sort_values("original_budget", ascending=True)

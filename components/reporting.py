@@ -2,11 +2,11 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from data.projects import MONTHS
-from styles.theme import PREG_BLUE, PREG_LIGHT_BLUE, AMBER
+from styles.theme import PREG_BLUE, PREG_LIGHT_BLUE, AMBER, section_banner
 
 
 def render_reporting_tab(df: pd.DataFrame) -> None:
-    st.subheader("CapEx Reporting")
+    section_banner("CapEx Dashboard", "Reporting")
 
     view = st.radio("View", options=["Monthly", "Weekly"], horizontal=True, key="reporting_view")
 

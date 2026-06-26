@@ -15,6 +15,19 @@ PLOTLY_COLORS = {
     "under_budget": GREEN,
 }
 
+def section_banner(label: str, title: str) -> None:
+    import streamlit as st
+    st.markdown(
+        f"""
+        <div class="preg-section-banner">
+            <div class="preg-section-label">{label}</div>
+            <div class="preg-section-title">{title}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def inject_css() -> str:
     return f"""
     <style>
@@ -55,6 +68,28 @@ def inject_css() -> str:
             font-size: 1.4rem !important;
             font-weight: 700 !important;
             color: {PREG_NAVY} !important;
+        }}
+        .preg-section-banner {{
+            background-color: {PREG_NAVY};
+            padding: 1.6rem 2rem;
+            margin: 0.5rem 0 1.2rem 0;
+        }}
+        .preg-section-label {{
+            color: #8FA8C0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }}
+        .preg-section-title {{
+            color: {WHITE};
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            line-height: 1.2;
         }}
     </style>
     """

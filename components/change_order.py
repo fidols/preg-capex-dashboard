@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
 from data.projects import calculate_co_impact
+from styles.theme import section_banner
 
 
 def render_change_order_tab(df: pd.DataFrame) -> None:
-    st.subheader("Change Order Impact Calculator")
+    section_banner("CapEx Dashboard", "Change Order Calculator")
     st.markdown("Model the financial impact of a new change order before approving it.")
 
     col_input, col_results = st.columns([1, 1])

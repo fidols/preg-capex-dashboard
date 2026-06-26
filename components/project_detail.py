@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from styles.theme import PREG_BLUE, PREG_NAVY, PREG_LIGHT_BLUE, AMBER, RED
+from styles.theme import PREG_BLUE, PREG_NAVY, PREG_LIGHT_BLUE, AMBER, RED, section_banner
 
 
 _BUDGET_CATEGORIES = {
@@ -15,7 +15,7 @@ _BUDGET_CATEGORIES = {
 
 
 def render_project_detail_tab(df: pd.DataFrame) -> None:
-    st.subheader("Project Detail")
+    section_banner("CapEx Dashboard", "Project Detail")
 
     default_project = st.session_state.get("selected_project", df["project_name"].iloc[0])
     if default_project not in df["project_name"].values:
