@@ -23,26 +23,26 @@ def inject_css() -> str:
         html, body, [class*="css"] {{
             font-family: 'Montserrat', sans-serif;
         }}
-        .preg-header {{
+        .preg-topbar {{
             background-color: {PREG_NAVY};
-            padding: 1.6rem 2rem;
-            border-bottom: 4px solid {PREG_BLUE};
+            color: {WHITE};
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.45rem 2rem;
+            margin-bottom: 0;
+        }}
+        .preg-header {{
+            background-color: {WHITE};
+            padding: 1.2rem 2rem;
+            border-bottom: 1px solid #DEE2E6;
             margin-bottom: 1rem;
         }}
         .preg-logo {{
-            height: 70px;
+            height: 80px;
             width: auto;
             display: block;
-            filter: brightness(0) invert(1);
-            margin-bottom: 0.3rem;
-        }}
-        .preg-header p {{
-            color: #BDC3C7;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.82rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            margin: 0.4rem 0 0 0;
         }}
         .kpi-card {{
             background-color: {WHITE};

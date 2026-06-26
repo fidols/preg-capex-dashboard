@@ -18,11 +18,13 @@ st.markdown(inject_css(), unsafe_allow_html=True)
 
 st.markdown(
     """
+    <div class="preg-topbar">
+        CapEx Portfolio Dashboard &nbsp;·&nbsp; FY 2026 &nbsp;·&nbsp; 12 Active Projects
+    </div>
     <div class="preg-header">
         <img src="https://postregroup.com/wp-content/uploads/2025/10/preg-logo.svg"
              alt="Post Real Estate Group"
              class="preg-logo" />
-        <p>CapEx Portfolio Dashboard &nbsp;·&nbsp; FY 2026 &nbsp;·&nbsp; 12 Active Projects</p>
     </div>
     """,
     unsafe_allow_html=True,
