@@ -102,10 +102,16 @@ def render_project_detail_tab(df: pd.DataFrame) -> None:
         st.info("No change orders on this project.")
     else:
         rng = random.Random(hash(selected))
+        n = int(row["change_orders_count"])
+        total_co = row["change_orders_amount"]
+        # Split actual CO amount evenly, rounding so they sum exactly
+        base = round(total_co / n / 100) * 100
+        amounts = [base] * n
+        amounts[-1] = round(total_co - base * (n - 1))
         co_rows = []
         cumulative = 0
-        for i in range(int(row["change_orders_count"])):
-            amount = round(row["change_orders_amount"] / row["change_orders_count"] * rng.uniform(0.7, 1.3) / 100) * 100
+        for i in range(n):
+            amount = amounts[i]
             cumulative += amount
             co_rows.append({
                 "CO #": f"CO-{i+1:03d}",
