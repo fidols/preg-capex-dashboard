@@ -244,7 +244,7 @@ Procore is construction project management software — the source of truth for 
 **What the Financial Analyst uses Procore for:**
 - **View project budgets** — original contract broken down by cost code; see committed vs. actual by line item
 - **Track change orders** — each CO has a status (pending → approved/rejected); approved COs increase committed costs and must be reflected in forecasts immediately
-- **Review pay applications** — contractors submit monthly; Procore routes them for approval; pay app amount and approved CO total must reconcile
+- **Review pay applications** — contractors submit monthly; Procore routes them for approval; pay app amount and approved CO total must reconcile. Procore tracks retainage per pay app — verify that the retainage withheld on each draw matches the percentage specified in the contract terms.
 - **Pull cost reports** — budget vs. actual by cost code, project, or portfolio-wide
 - **Monitor RFIs and submittals** — not directly a financial task, but delays here cause schedule slippage that affects cost-to-complete timing
 
@@ -431,3 +431,39 @@ This is a strong close. Use it when there's a natural opening — don't force it
 
 ### Closing Move
 End with: *"What would make someone stand out in the first 90 days here?"* Then listen. That answer tells you exactly what matters to Adam and gives you a final moment to connect your background to it.
+
+---
+
+## Self-Quiz — Test Yourself Before the Interview
+
+Answer these out loud without looking at the wiki. Time yourself — if you can't answer in 60 seconds, re-read that section.
+
+**Company & Role**
+1. What are the four divisions of Post Investment Group that matter for CapEx, and what does each one do?
+2. What percentage of PREG's portfolio is LIHTC vs. Affordable Conversion vs. Bond Financed vs. Market Rate?
+3. Why does PREG's vertical integration (specifically 1st Call as internal GC) change how you do your job compared to working with external contractors?
+4. What is the salary range for this role and who does it report to?
+
+**CapEx Mechanics**
+5. Walk me through what happens from the moment a contractor submits a change order to the moment it shows up in your weekly report.
+6. What is the difference between committed costs and actual spend? Give an example of each.
+7. What is cost-to-complete and how do you calculate it when a change order has been approved mid-project?
+8. What is retainage? What % is typical, and when does it get released?
+9. You're reconciling Procore and Yardi at month-end and find a $180K discrepancy. Walk me through how you'd investigate it.
+
+**Tools**
+10. What is the difference between Procore and Yardi — what does each one own, and which one is the source of truth for what?
+11. What would you use Entrata for (vs. Procore or Yardi) in your daily work?
+12. What Excel deliverable would you build to give Adam a weekly CapEx status across all 158 assets?
+
+**LIHTC & Affordable Housing**
+13. What is the difference between a 9% credit and a 4% credit? Which type is Viewcrest Village?
+14. What is an AMI tier, and why does a property advertising 140% AMI make you question whether it's truly LIHTC?
+15. Viewcrest Village has restrictions running to 2032. Why does that date matter for how you think about CapEx decisions today?
+16. What is a HAP contract and what happens to it if the property fails a HUD inspection?
+
+**Adam & Interview**
+17. Adam worked at Greystar. What does that tell you about what he's going to care about in this interview?
+18. How do you frame the fact that you've never used Procore or Yardi?
+19. What's the strongest card you can play in this interview and why?
+20. What question do you close with, and why?
