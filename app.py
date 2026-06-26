@@ -9,7 +9,7 @@ from styles.theme import inject_css
 
 st.set_page_config(
     page_title="Post Real Estate Group — CapEx Dashboard",
-    page_icon="🏢",
+    page_icon=None,
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -36,10 +36,10 @@ render_kpi_strip(df)
 st.divider()
 
 tab1, tab2, tab3, tab4 = st.tabs([
-    "📊 Portfolio Overview",
-    "🔍 Project Detail",
-    "🔧 Change Order Calculator",
-    "📈 Reporting",
+    "Portfolio Overview",
+    "Project Detail",
+    "Change Order Calculator",
+    "Reporting",
 ])
 
 with tab1:
