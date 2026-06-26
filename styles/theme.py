@@ -18,23 +18,32 @@ PLOTLY_COLORS = {
 def inject_css() -> str:
     return f"""
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap');
+
+        html, body, [class*="css"] {{
+            font-family: 'Montserrat', sans-serif;
+        }}
         .preg-header {{
             background-color: {PREG_NAVY};
-            padding: 1.2rem 2rem;
+            padding: 1.6rem 2rem;
             border-bottom: 4px solid {PREG_BLUE};
             margin-bottom: 1rem;
         }}
         .preg-header h1 {{
             color: {WHITE};
-            font-size: 1.6rem;
-            font-weight: 700;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
             margin: 0;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
         }}
         .preg-header p {{
             color: #BDC3C7;
-            font-size: 0.85rem;
-            margin: 0.2rem 0 0 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin: 0.4rem 0 0 0;
         }}
         .kpi-card {{
             background-color: {WHITE};
