@@ -73,10 +73,9 @@ def render_project_detail_tab(df: pd.DataFrame) -> None:
         ctc_pct = ctc / total_budget_incl_co if total_budget_incl_co > 0 else 0
 
         fig_gauge = go.Figure(go.Indicator(
-            mode="gauge+number+delta",
+            mode="gauge+number",
             value=ctc,
             number={"prefix": "$", "valueformat": ",.0f"},
-            delta={"reference": total_budget_incl_co, "valueformat": ",.0f", "prefix": "Budget: $"},
             gauge={
                 "axis": {"range": [0, total_budget_incl_co]},
                 "bar": {"color": PREG_BLUE},
@@ -91,7 +90,7 @@ def render_project_detail_tab(df: pd.DataFrame) -> None:
                     "value": total_budget_incl_co,
                 },
             },
-            title={"text": f"Remaining to spend<br><span style='font-size:0.8em'>{ctc_pct*100:.0f}% of budget remaining</span>"},
+            title={"text": f"Cost to Complete ({ctc_pct*100:.0f}% of budget remaining)<br><span style='font-size:0.85em;color:#555'>Already spent: ${row['actual_spend']:,.0f}</span>"},
         ))
         fig_gauge.update_layout(height=300, margin=dict(l=20, r=20, t=20, b=0))
         st.plotly_chart(fig_gauge, use_container_width=True)
