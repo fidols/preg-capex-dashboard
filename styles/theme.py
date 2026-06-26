@@ -29,13 +29,12 @@ def inject_css() -> str:
             border-bottom: 4px solid {PREG_BLUE};
             margin-bottom: 1rem;
         }}
-        .preg-header h1 {{
-            color: {WHITE};
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.8rem;
-            font-weight: 600;
-            margin: 0;
-            letter-spacing: 0.08em;
+        .preg-logo {{
+            height: 70px;
+            width: auto;
+            display: block;
+            filter: brightness(0) invert(1);
+            margin-bottom: 0.3rem;
         }}
         .preg-header p {{
             color: #BDC3C7;
