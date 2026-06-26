@@ -163,3 +163,71 @@ PREG describes itself as the "industry leader in multifamily and affordable hous
 
 *Section 1 complete — rewritten from postregroup.com and postinvestmentgroup.com on June 25, 2026. Previous version was based on the wrong company (postrealestategroup.com, a small Colorado-based boutique PM firm).*
 *Sections 2–7 to be added in subsequent tasks.*
+
+---
+
+## 2. The Financial Analyst, CapEx Role
+
+**Salary:** $105,000–$115,000 base + performance bonus
+**Location:** Beverly Hills, CA (Hybrid)
+**Reports to:** Construction team (1st Call — PREG's internal GC)
+
+### What You'll Actually Do Day-to-Day
+1. **Track budgets** — pull actuals from Yardi/Procore, compare to approved budget, flag variances before they become surprises
+2. **Reconcile change orders** — when 1st Call (or a subcontractor) requests more money, log it, recalculate cost-to-complete, update the project forecast
+3. **Produce reporting packages** — weekly/monthly CapEx reports showing spend, committed costs, remaining budget, variance % — delivered on time, every time
+4. **Cost-to-complete forecasting** — use % complete + burn rate to project finish date and final cost
+5. **Support capital budgeting** — help build the annual CapEx plan across 158+ assets in 14 states
+6. **Partner cross-functionally** — 1st Call (Construction), TAM Residential (Property Management), Asset Management, Accounting all touch your numbers
+
+### What Success Looks Like (Year 1)
+- Reports are delivered on time, error-free, every week
+- Budget variances are flagged *before* they become problems
+- Adam trusts the numbers without double-checking them
+- You understand how a change order in Procore flows through to Yardi — and can catch when it doesn't
+
+### Why the Vertical Integration Matters for This Role
+At most real estate companies, the CapEx analyst works with third-party GCs — arms-length contractors. At PREG, the GC is **1st Call**, which is in the same building (same parent company: Post Investment Group). This means:
+- Change orders are internal documents, not adversarial negotiations
+- Budget overruns reflect on the whole organization, not just the contractor
+- You have more visibility into cost drivers — and more accountability to get the numbers right
+
+### Key Tools
+| Tool | What It Does | Your Relationship to It |
+|---|---|---|
+| **Procore** | Construction PM — budgets, change orders, submittals, RFIs, pay apps | Pull actuals, log change orders, track project status |
+| **Yardi** | Real estate ERP — GL, AP, property accounting | Source of truth for what was actually paid; reconcile vs. Procore |
+| **Entrata** | Multifamily PM platform — leasing, resident portal, rent collection | Context for unit turnaround timelines post-CapEx |
+| **Excel** | Advanced modeling | CapEx forecasts, change order logs, scenario planning |
+| **Power BI / Tableau** | Visualization | Dashboard reporting for leadership |
+
+---
+
+## 3. CapEx Domain Vocabulary
+
+| Term | Definition | Why It Matters for This Role |
+|---|---|---|
+| **CapEx** | Capital expenditures — money spent improving or upgrading assets (vs. OpEx: ongoing operating costs) | Everything in this role |
+| **Change Order (CO)** | A contractor request to modify original contract scope and/or price | Major budget risk; must be logged, approved, and reflected in cost-to-complete immediately |
+| **Pay Application (Pay App)** | Monthly invoice a contractor submits for work completed — reviewed against schedule of values | How money leaves the account; you reconcile pay apps against Procore and Yardi |
+| **Schedule of Values (SOV)** | Contract breakdown by line item (foundation, framing, MEP, finishes, etc.) | How pay apps are evaluated — is the % billed proportional to % complete? |
+| **Cost-to-Complete (CTC)** | Estimated remaining spend to finish a project | Core forecast metric — original budget minus actual spend, adjusted for scope changes |
+| **Budget-to-Actual Variance** | Gap between planned spend and actual spend, as $ and % | The headline number in every weekly report |
+| **Committed Costs** | Costs contractually obligated but not yet paid (signed contracts + approved COs) | Real money — shows up in forecasts before it appears as actual spend |
+| **Retainage** | % of each pay app withheld until project completion (typically 5–10%) | Shows as unpaid liability; affects cash flow forecasting |
+| **Cost-to-Complete vs. Budget-at-Completion** | CTC = remaining spend; BAC = full projected final cost (actual + CTC) | Don't confuse them — BAC is what you compare to original budget |
+| **Contingency** | Budget reserve for unforeseen costs (typically 5–15% of hard costs) | Gets drawn down as change orders are approved; when it's gone, you're over budget |
+| **Hard Costs** | Direct construction costs — labor, materials, subcontractors | The bulk of a CapEx budget |
+| **Soft Costs** | Indirect costs — permits, architecture, engineering, financing fees | Often underestimated; worth asking PREG how they classify these |
+| **GC (General Contractor)** | The main contractor managing the project — at PREG, this is 1st Call | Internal accountability; no adversarial dynamic |
+| **Subcontractor** | Specialty trades hired by GC (electrical, plumbing, HVAC, etc.) | Their pay apps flow through 1st Call to Procore |
+| **NOI (Net Operating Income)** | Revenue minus operating expenses — excludes CapEx | How investors value a property; CapEx investments are expected to grow NOI |
+| **Cap Rate** | NOI ÷ property value | Lower cap rate = higher value (pricier market); CapEx that raises NOI improves cap rate math |
+| **Value-Add** | Strategy of buying underperforming assets, investing CapEx, raising NOI | PREG's core playbook for market-rate assets |
+| **Affordable Conversion** | Market-rate properties converted to long-term affordability via regulatory agreements | 52.53% of PREG's portfolio — CapEx must comply with affordability covenants |
+| **LIHTC** | Low Income Housing Tax Credit — federal program financing affordable housing via tax credits | 37.34% of PREG's portfolio; compliance requirements govern what CapEx can be done and when |
+| **HAP Contract** | Housing Assistance Payments contract — HUD agreement guaranteeing rental subsidies | Common in affordable housing; affects project economics and CapEx approval process |
+| **Procore** | Construction PM software — source of construction truth | You pull from here daily |
+| **Yardi** | Real estate ERP — source of financial truth | You reconcile against Procore monthly |
+| **Entrata** | Multifamily PM platform | Leasing and operations data; relevant for unit turnover CapEx timing |
+| **AppFolio** | Alternative PM platform (used by some operators) | Mentioned for awareness; PREG uses Entrata/Yardi |
