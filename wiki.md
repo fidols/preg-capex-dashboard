@@ -161,8 +161,7 @@ PREG describes itself as the "industry leader in multifamily and affordable hous
 
 ---
 
-*Section 1 complete — rewritten from postregroup.com and postinvestmentgroup.com on June 25, 2026. Previous version was based on the wrong company (postrealestategroup.com, a small Colorado-based boutique PM firm).*
-*Sections 2–7 to be added in subsequent tasks.*
+*Source: postregroup.com and postinvestmentgroup.com, scraped June 25, 2026.*
 
 ---
 
