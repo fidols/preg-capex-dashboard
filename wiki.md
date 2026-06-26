@@ -361,3 +361,73 @@ LIHTC properties restrict rents to tenants earning below a % of Area Median Inco
 
 ### GIS / Community Context
 PREG invests heavily in communities with genuine housing need. The spatial analysis work Fidel did (mapping food access deserts in LA County using ArcGIS Pro) is directly adjacent to how affordable housing developers think about capital deployment — identifying underserved geographies and community impact. This is a natural bridge if the affordable housing mission comes up.
+
+---
+
+## 6. Adam and Greystar — Interviewer Context
+
+### About Greystar
+Greystar is the world's largest vertically integrated multifamily real estate company:
+- Manages 800,000+ units globally across 18+ countries
+- Develops, owns, and manages across the full property lifecycle
+- Known for institutional-quality processes, rigorous financial controls, and professional management culture
+- Heavy users of Yardi and Entrata — these are industry-standard tools at Greystar's scale
+- Large-scale CapEx programs running simultaneously across thousands of properties
+- Preferred Fannie Mae and Freddie Mac borrower (like PREG — common ground)
+
+### What Adam Likely Cares About (Based on Greystar Background)
+Coming from Greystar, Adam spent years in a highly systematized, institutional CapEx environment. He will think in terms of:
+
+1. **Process discipline** — Greystar runs CapEx at massive scale; reports are consistent, on time, and structured every time, without exception. He will care whether Fidel understands why this matters.
+
+2. **Data accuracy over speed** — At Greystar, a sloppy variance % isn't just an annoyance — it's a material error that affects portfolio decisions. He will respect someone who checks their numbers.
+
+3. **Proactive communication** — At institutional operators, you flag problems early. Surprises are never acceptable. Showing up at month-end with a 20% overage is a failure mode; flagging it at 5% while you still have options is the right behavior.
+
+4. **Tool fluency (conceptual if not hands-on)** — He'll know Yardi inside-out. He'll appreciate someone who understands what the system does even without hands-on time, and who is honest about the gap rather than overselling.
+
+5. **Cross-functional awareness** — CapEx at Greystar touched construction, asset management, development, and accounting simultaneously. He'll expect Fidel to understand that the numbers don't live in a vacuum.
+
+6. **Affordable housing complexity as a differentiator** — Greystar is predominantly conventional market-rate. PREG is >90% affordable. Adam moved to PREG knowing this. He likely finds the affordable complexity interesting, not intimidating — and will be curious whether Fidel does too.
+
+### The Key Tension to Navigate
+Adam comes from a conventional, institutional, market-rate world. PREG is an affordable-housing-first, founder-culture, vertically integrated operator. He bridged that gap himself. The interview is partly about whether Fidel can bridge a similar gap — real estate finance experience vs. PREG's specific context. Frame your gaps (no Procore/Yardi hands-on, no direct multifamily experience) the same way Adam might have framed his when he moved from Greystar: "the domain is new, the discipline transfers."
+
+### Questions to Ask Adam
+1. "PREG's vertical integration means CapEx decisions touch 1st Call internally — how does that change the reconciliation process compared to working with third-party GCs at Greystar?" *(shows structural awareness)*
+2. "How does PREG's Procore-to-Yardi workflow compare to what you set up at Greystar — are there places where the internal GC relationship creates unique data challenges?" *(invites him to share expertise; shows you know the tools conceptually)*
+3. "What does the weekly CapEx reporting cadence look like here — is it a fixed template or does it adapt by asset type given the mix of LIHTC and Affordable Conversion properties?" *(practical, shows you're thinking about the actual job)*
+4. "Where does affordable housing compliance most often surface as a constraint on CapEx timing — is it regulatory approvals, HAP inspection cycles, or something else?" *(shows LIHTC awareness)*
+5. "What would make someone successful in this role in the first 90 days?" *(classic close — always ask this)*
+
+---
+
+## 7. Interview Strategy
+
+### What to Lead With
+1. **Currie & Brown capstone** — 522-project construction cost dataset, cost variance analysis, text-driven pricing problem requiring NLP, Power BI dashboard, Excel scenario planning tool. This is directly analogous to CapEx reporting at PREG. Lead here, not with the degree.
+2. **Proactive domain research** — mention you built this wiki and the CapEx dashboard specifically to close knowledge gaps before this interview. That is exactly the behavior PREG is hiring for: someone who doesn't wait to be trained.
+3. **Python + Excel data logic transfers** — "The tools differ; the analytical discipline is the same. I understand what Procore and Yardi do, and I pick up new platforms quickly."
+
+### Framing Honest Gaps
+| Gap | How to Frame It |
+|---|---|
+| No Procore/Yardi hands-on | "I understand what each system does and I pick up platforms quickly. My Python and Excel background means the data logic transfers — what I'm learning is the UI, not the underlying concepts." |
+| No direct real estate experience | "Currie & Brown gave me deep exposure to construction cost analysis — the vocabulary, the cost classification systems, the budget-to-actual mechanics. The asset class is different; the analytical discipline is the same." |
+| No multifamily background | "I've done spatial analysis of underserved communities in LA County — that kind of thinking is adjacent to how PREG thinks about where to deploy capital. The affordable housing mission resonates." |
+| MS, not CPA | "I bring a strong quantitative and modeling background. I'm planning to pursue CPA as I grow in the role." *(only say this if it's true)* |
+
+### The Demo Moment
+If the conversation allows: *"I built a CapEx scenario planning dashboard using actual PREG properties before this interview — it's running on my laptop if you'd like to see it. I wanted to make sure I understood the kind of reporting you'd actually need, not just read about it."*
+
+This is a strong close. Use it when there's a natural opening — don't force it at the wrong moment.
+
+### What NOT to Do
+- Don't oversell tool experience you don't have — Adam will know immediately
+- Don't undersell Currie & Brown — it is directly relevant
+- Don't ask about salary, PTO, or remote policy in the second interview
+- Don't let the conversation end without asking what the next steps are
+- Don't treat PREG as generic real estate — they are an affordable-housing-first operator and are proud of it
+
+### Closing Move
+End with: *"What would make someone stand out in the first 90 days here?"* Then listen. That answer tells you exactly what matters to Adam and gives you a final moment to connect your background to it.
