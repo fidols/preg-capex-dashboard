@@ -50,40 +50,40 @@ PREG is also a **preferred borrower and select sponsor of Fannie Mae and Freddie
 
 *Source: postregroup.com/map — confirmed current portfolio properties as of June 2026 scrape. 158 properties across 14 states. Representative sample below.*
 
-**Texas (heavy presence — 40+ properties, 10,000+ units)**
-- The Hendry — Garland, TX ($104.9M deal capitalization)
-- The Sydney — Mansfield, TX ($74.3M)
-- Ardent at Mill Creek — Mill Creek, WA ($163.2M — largest featured deal)
-- The Latitude — Plano, TX ($82.2M)
-- The Hightone — Denton, TX ($86.5M)
-- The Grand at Hill Street — Grand Prairie, TX ($73.9M)
-- Discovery Park — Denton, TX ($61.1M)
-- Retreat by Watermark — Corpus Christi, TX ($64.5M)
-
-**California (41 properties, 5,430 units)**
-- San Regis — Van Nuys, CA (390 units, built 1967)
-- Chaparral Apartments — Palmdale, CA (296 units)
-- The Marquee Apartments — Los Angeles, CA (236 units)
-- Emerald Pointe — Modesto, CA (250 units)
-- Orchard Glen — San Jose, CA (288 units)
-- Harbor Terrace — San Pedro, CA (93 units; featured non-profit partnership case study)
-- Foxdale Village — San Jose, CA (287 units)
-- Canyon Villa — Chula Vista, CA (183 units)
-
-**Georgia (7 properties, 2,609 units)**
-- Avenues at Kennesaw — Kennesaw, GA (524 units)
-- Rosemont Peachtree Corners — Norcross, GA (440 units)
-- Valera Riverside — Lithia Springs, GA (425, built 2022)
-- Park on Sweetwater — Lawrenceville, GA (304 units)
-- Crestmark Apartment Homes — Douglasville, GA (334 units)
-
-**South Carolina (7 properties, 1,972 units)**
-- Tribute Verdae — Greenville, SC (268, built 2021)
-- The Paddock Club Columbia — Columbia, SC (336 units; bond financing case study)
-- Magnolia — Charleston, SC (312 units)
-- Latitude at the Commons — Myrtle Beach, SC (288 units)
-
-**Other states:** Florida (2 props, 736 units: Clipper Cove–Boynton Beach, Elliot Baymeadows–Jacksonville), North Carolina (1 prop: Village at Broadstone Station–Apex, 300 units), New Mexico (5 props, 917 units), Oregon (3 props, 357 units), Arkansas (2 props, 304 units), Kansas (1 prop: Inwood Crossing–Wichita, 260 units), Louisiana (1 prop: Walnut Square–New Orleans, 209 units), Michigan (1 prop: Village Glen–Traverse City, 120 units), Oklahoma (1 prop: Stonegate–Tulsa, 240 units), Washington (Ardent at Mill Creek).
+| Property Name | City | State | Units | Asset Type |
+|---|---|---|---|---|
+| The Hendry | Garland | TX | N/A | Mixed/Unknown |
+| The Sydney | Mansfield | TX | N/A | Mixed/Unknown |
+| The Latitude | Plano | TX | N/A | Mixed/Unknown |
+| The Hightone | Denton | TX | N/A | Mixed/Unknown |
+| The Grand at Hill Street | Grand Prairie | TX | N/A | Mixed/Unknown |
+| Discovery Park | Denton | TX | N/A | Mixed/Unknown |
+| Retreat by Watermark | Corpus Christi | TX | N/A | Mixed/Unknown |
+| San Regis | Van Nuys | CA | 390 | Affordable Conversion |
+| Chaparral Apartments | Palmdale | CA | 296 | Mixed/Unknown |
+| The Marquee Apartments | Los Angeles | CA | 236 | Mixed/Unknown |
+| Emerald Pointe | Modesto | CA | 250 | Mixed/Unknown |
+| Orchard Glen | San Jose | CA | 288 | Mixed/Unknown |
+| Harbor Terrace | San Pedro | CA | 93 | Affordable Conversion |
+| Foxdale Village | San Jose | CA | 287 | Mixed/Unknown |
+| Canyon Villa | Chula Vista | CA | 183 | Mixed/Unknown |
+| Avenues at Kennesaw | Kennesaw | GA | 524 | Mixed/Unknown |
+| Rosemont Peachtree Corners | Norcross | GA | 440 | Mixed/Unknown |
+| Valera Riverside | Lithia Springs | GA | 425 | LIHTC |
+| Park on Sweetwater | Lawrenceville | GA | 304 | Mixed/Unknown |
+| Crestmark Apartment Homes | Douglasville | GA | 334 | Mixed/Unknown |
+| Tribute Verdae | Greenville | SC | 268 | LIHTC |
+| The Paddock Club Columbia | Columbia | SC | 336 | Bond Financed |
+| Magnolia | Charleston | SC | 312 | Mixed/Unknown |
+| Latitude at the Commons | Myrtle Beach | SC | 288 | Mixed/Unknown |
+| Clipper Cove | Boynton Beach | FL | N/A | Mixed/Unknown |
+| Elliot Baymeadows | Jacksonville | FL | N/A | Mixed/Unknown |
+| Village at Broadstone Station | Apex | NC | 300 | Mixed/Unknown |
+| Inwood Crossing | Wichita | KS | 260 | Mixed/Unknown |
+| Walnut Square | New Orleans | LA | 209 | Mixed/Unknown |
+| Village Glen | Traverse City | MI | 120 | Mixed/Unknown |
+| Stonegate | Tulsa | OK | 240 | Mixed/Unknown |
+| Ardent at Mill Creek | Mill Creek | WA | N/A | Mixed/Unknown |
 
 ---
 
