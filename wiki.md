@@ -89,6 +89,27 @@ PREG is also a **preferred borrower and select sponsor of Fannie Mae and Freddie
 
 ---
 
+### LIHTC Portfolio Detail
+*Source: HUD LIHTC Database (huduser.gov/lihtc, data through 2024) and affordablehousinghub.org; supplemented by PREG case studies and property-level research. Searched June 25, 2026.*
+
+**HUD database limitation:** The HUD LIHTC database does not support sponsor-name lookup. It is a state/city/county form query. No PREG property was identified by searching "Post Real Estate Group," "Post Investment Group," or "TAM Residential" as a named sponsor — the public database does not index by current owner, only by original project data at time of credit allocation.
+
+**One confirmed LIHTC property found via property-level HUD data lookup:**
+
+| Property Name | City | State | Units | Year Placed in Service | Credit Type | Notes |
+|---|---|---|---|---|---|---|
+| Viewcrest Village | Bremerton | WA | 300 (294 low-income) | 2003 | 4% | Tax-exempt bond financed; built 1952; serves disabled residents; restrictions run through 2032. PREG acquired as existing LIHTC asset; deployed $1.5M CapEx (roofs, paint); $750K reserved for future needs; $2M additional planned. |
+
+**Other income-restricted PREG properties researched — LIHTC status unconfirmed:**
+
+- **Tribute Verdae** (Greenville, SC, 268 units, built 2021): Income-restricted at 60% and 80% AMI. However, the property also advertises a 140% AMI "Essential Living Program" tier — this is atypical for standard LIHTC compliance, which caps eligibility at 60% AMI (9% credit) or 50–60% AMI (4% bond-financed). The 140% AMI tier is consistent with workforce housing / Affordable Conversion, not formal LIHTC. Not found as a named LIHTC record in the HUD public database. **Asset type labeled "LIHTC" in the portfolio table above should be treated with caution — may be Affordable Conversion.**
+
+- **Valera Riverside** (Lithia Springs, GA, 425 units, built 2022): Accepts Housing Choice Vouchers; income restrictions implied. Not found as a named LIHTC record in the HUD public database. Built 2022 — HUD has data through 2024, so a record could exist but was not located via public property search. Status: unconfirmed from HUD records.
+
+> **Interview context:** PREG's LIHTC program began in 2011 (per their website). Their stated strategy is primarily *acquisition* of existing LIHTC assets, not ground-up development — which means properties typically appear in the HUD database under the original developer's name, not PREG's. Viewcrest Village is the prototypical example: a 1952-built property placed into LIHTC compliance in 2003 (before PREG acquired it), with restrictions running to 2032. PREG's CapEx role is to maintain and improve these assets during their compliance window while working toward restriction extensions or workforce housing conversion.
+
+---
+
 ### Investment Thesis / Strategy
 
 PREG describes itself as the "industry leader in multifamily and affordable housing." Core strategy elements:
