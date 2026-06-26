@@ -7,9 +7,9 @@
 
 **Founded:** 2007 (LIHTC affordable housing program established 2011; Workforce Housing Initiative began 2018)
 **HQ:** Beverly Hills, CA (310-788-3445 / ir@postinvestmentgroup.com)
-**Portfolio (current, as of May 2026):** 158 assets, 36,727 units, 14 states, $6.3BN in transactions
+**Portfolio (current, as of May 2026):** 158 assets, 36,727 units, 14 states, $6.3BN *(label from PREG website — exact definition unconfirmed; do not use interchangeably with AUM or market value)*
 **Portfolio (all-time historical):** 191 assets, 50,172 units, $7.0BN total transactions (sold + owned)
-**Acquisition pace:** Typically acquires $1.5–$2 billion in multifamily properties per year
+**Acquisition pace:** PREG has reportedly been acquiring **$1.5–2 billion per year** in recent years (2023–2026 pace, per public reporting) — note this pace implies recent acceleration; the all-time $7.0BN total over 19 years averages ~$370M/year, suggesting the $1.5–2B rate is a recent growth phase, not historical average. Verify at interview if used.
 **Website:** [postregroup.com](https://postregroup.com)
 **Parent:** Post Investment Group (postinvestmentgroup.com) — a holding company with 9 operating companies, 1,250+ direct employees, 1,500+ indirect
 
@@ -41,6 +41,8 @@ PREG is also a **preferred borrower and select sponsor of Fannie Mae and Freddie
 - **Bond Financed** — federally tax-exempt municipal bond structures; 6.96% of current portfolio
 - **Affordable Conversion** — market-rate properties converted to long-term affordability; 52.53% of current portfolio
 - **Market Rate** — only 3.16% of the current portfolio (PREG skews heavily affordable/workforce)
+
+*(Source: PREG website portfolio category breakdown — not derived from the property name scrape above, where asset type is largely unconfirmed per-property)*
 
 > **Note:** The planning document listed industrial buildings and mobile home parks as asset types. These were not confirmed on the website or in any public materials. The website and all public-facing content is exclusively multifamily and affordable housing. Do not cite industrial or MHP exposure at the interview without asking directly.
 
@@ -120,21 +122,6 @@ PREG describes itself as the "industry leader in multifamily and affordable hous
 
 ---
 
-### Brand Colors (from postregroup.com CSS)
-
-| Color Role | Hex | Notes |
-|---|---|---|
-| Primary (dark blue) | `#114F7E` | Main button and CTA color |
-| Secondary (blue) | `#0075B0` | Supporting blue |
-| Text / Navy | `#1C355E` | Primary body text and link color |
-| Background | `#FFFFFF` | White |
-| Font (headings) | The Seasons + sans-serif | Serif display font |
-| Font (body) | Lato | Clean sans-serif |
-
-**Design personality:** Professional, medium energy, institutional feel. Dark blue-dominant palette signals stability and trust — typical of affordable housing / institutional multifamily operators.
-
----
-
 ### Key Signals for the Interview
 
 1. **This is a heavily affordable-housing-weighted operator** — only 3.16% of the current portfolio is straight market-rate. PREG is first and foremost an affordable/workforce housing specialist, not a conventional value-add apartment company. CapEx here intersects with LIHTC compliance timelines, regulatory oversight, and bond covenants — not just punch lists and rent bumps.
@@ -148,6 +135,8 @@ PREG describes itself as the "industry leader in multifamily and affordable hous
 5. **Jason Post is the founder** — this is a founder-led company. The culture will reflect that: entrepreneurial, fast-moving, but with the complexity of 1,250+ employees and institutional-scale compliance requirements. Expect a mix of institutional process and startup agility.
 
 6. **Post Investment Group is the parent** — PREG is one of 9 operating companies under Post Investment Group. The other companies (The Now Massage, Hawks Kids, Bowie Barker, 710 Labs) are unrelated to real estate. This context matters: the CFO, COO, and legal/people functions are shared across the holding company, not purely real estate-focused.
+
+7. **Key Signal #3 — Bridge Adam's Greystar background to PREG's affordable focus:** Adam comes from Greystar — high-volume, conventional market-rate multifamily with institutional CapEx programs. PREG is >90% affordable/LIHTC-weighted. Be ready to articulate how compliance timelines, HAP contracts, and LIHTC regulatory agreements change the CapEx calculus compared to conventional value-add. Frame it as a learning opportunity, not a gap: "I'm curious how your CapEx process adapts for the compliance requirements on the affordable side — that's a dynamic I haven't seen at Greystar scale."
 
 ---
 
