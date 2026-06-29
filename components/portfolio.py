@@ -23,9 +23,7 @@ def render_portfolio_tab(df: pd.DataFrame) -> None:
     display_df["Spent ($)"] = display_df["Spent ($)"].map("${:,.0f}".format)
     display_df["Committed ($)"] = display_df["Committed ($)"].map("${:,.0f}".format)
     display_df["% Complete"] = (display_df["% Complete"] * 100).map("{:.0f}%".format)
-    display_df["Variance %"] = display_df["Variance %"].map(
-        lambda v: f"+{v*100:.1f}%" if v > 0 else f"{v*100:.1f}%"
-    )
+    display_df["Variance %"] = display_df["Variance %"] * 100  # keep numeric for correct sorting
 
     event = st.dataframe(
         display_df,
@@ -34,6 +32,12 @@ def render_portfolio_tab(df: pd.DataFrame) -> None:
         selection_mode="single-row",
         on_select="rerun",
         key="portfolio_table",
+        column_config={
+            "Variance %": st.column_config.NumberColumn(
+                "Variance %",
+                format="%.1f%%",
+            )
+        },
     )
 
     if event.selection.rows:
