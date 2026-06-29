@@ -26,6 +26,10 @@ def render_change_order_tab(df: pd.DataFrame) -> None:
             key="co_calc_amount",
         )
         st.text_input("Description (optional)", placeholder="e.g. Unforeseen MEP repairs", key="co_calc_desc")
+        if st.button("Reset", key="co_calc_reset"):
+            st.session_state["co_calc_amount"] = 0
+            st.session_state["co_calc_desc"] = ""
+            st.rerun()
 
     row = df[df["project_name"] == selected].iloc[0]
     new_ctc, new_variance = calculate_co_impact(df, selected, co_amount)
