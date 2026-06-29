@@ -42,7 +42,7 @@ def generate_projects() -> pd.DataFrame:
 
         cost_to_complete = max(original_budget + co_amount - actual_spend, 0)
 
-        expected_spend = original_budget * pct_complete
+        expected_spend = (original_budget + co_amount) * pct_complete
         variance_pct = round((actual_spend - expected_spend) / expected_spend, 4) if expected_spend > 0 else 0.0
 
         monthly_spend = _generate_monthly_spend(actual_spend, rng)
