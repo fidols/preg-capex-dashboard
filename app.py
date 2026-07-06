@@ -5,6 +5,7 @@ from components.portfolio import render_portfolio_tab
 from components.project_detail import render_project_detail_tab
 from components.change_order import render_change_order_tab
 from components.reporting import render_reporting_tab
+from components.alerts import render_alerts_tab
 from styles.theme import inject_css
 
 st.set_page_config(
@@ -39,11 +40,12 @@ render_kpi_strip(df)
 
 st.divider()
 
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "Portfolio Overview",
     "Project Detail",
     "Change Order Calculator",
     "Reporting",
+    "Portfolio Alerts",
 ])
 
 with tab1:
@@ -57,3 +59,6 @@ with tab3:
 
 with tab4:
     render_reporting_tab(df)
+
+with tab5:
+    render_alerts_tab(df)

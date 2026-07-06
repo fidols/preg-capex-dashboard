@@ -1,0 +1,110 @@
+import streamlit as st
+import pandas as pd
+from styles.theme import section_banner, PREG_NAVY, WHITE
+
+_OVER_BUDGET_THRESHOLD = 0.05   # +5% = red
+_UNDER_PACED_THRESHOLD = -0.05  # -5% = yellow
+_CO_HIGH_THRESHOLD = 3          # 3+ change orders = flag
+
+
+def _classify(row: pd.Series) -> tuple:
+    v = row["variance_pct"]
+    cos = row["change_orders_count"]
+
+    if v > _OVER_BUDGET_THRESHOLD:
+        status = "Over Budget"
+        color = "#C0392B"
+        label = "RED"
+        if cos >= _CO_HIGH_THRESHOLD:
+            action = (
+                f"Variance +{v*100:.1f}% with {cos} COs — audit CO log for unapproved items, "
+                "hold next pay app pending PM sign-off, escalate to Adam."
+            )
+        else:
+            action = (
+                f"Variance +{v*100:.1f}% — review subcontractor billings against Schedule of Values, "
+                "confirm no unapproved scope additions, flag before next pay app."
+            )
+    elif v < _UNDER_PACED_THRESHOLD:
+        status = "Under-Paced"
+        color = "#E67E22"
+        label = "YELLOW"
+        action = (
+            f"Variance {v*100:.1f}% — confirm with GC whether this is a billing lag "
+            "or construction delay. If delayed, update schedule and notify asset management "
+            "so cash flow projections stay accurate."
+        )
+    else:
+        status = "On Track"
+        color = "#27AE60"
+        label = "GREEN"
+        action = "No action required. Monitor at next monthly review."
+
+    return status, color, label, action
+
+
+def render_alerts_tab(df: pd.DataFrame) -> None:
+    section_banner("Portfolio Intelligence", "Portfolio Alerts")
+
+    st.markdown(
+        "Real-time variance flags with recommended actions. "
+        "Red = immediate attention. Yellow = monitor closely. Green = on track."
+    )
+
+    red_threshold_pct = _OVER_BUDGET_THRESHOLD * 100
+    yellow_threshold_pct = abs(_UNDER_PACED_THRESHOLD) * 100
+
+    col1, col2, col3 = st.columns(3)
+    red_count = int((df["variance_pct"] > _OVER_BUDGET_THRESHOLD).sum())
+    yellow_count = int(
+        ((df["variance_pct"] <= _OVER_BUDGET_THRESHOLD) &
+         (df["variance_pct"] < _UNDER_PACED_THRESHOLD)).sum()
+    )
+    green_count = int(len(df) - red_count - yellow_count)
+
+    col1.metric("Immediate Action", f"{red_count} projects", delta=f">{red_threshold_pct:.0f}% over budget", delta_color="inverse")
+    col2.metric("Monitor Closely", f"{yellow_count} projects", delta=f">{yellow_threshold_pct:.0f}% under-paced", delta_color="inverse")
+    col3.metric("On Track", f"{green_count} projects")
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    for _, row in df.sort_values("variance_pct", ascending=False).iterrows():
+        status, color, label, action = _classify(row)
+        variance_str = f"+{row['variance_pct']*100:.1f}%" if row["variance_pct"] > 0 else f"{row['variance_pct']*100:.1f}%"
+
+        st.markdown(
+            f"""
+            <div style="
+                border-left: 5px solid {color};
+                background-color: #FAFAFA;
+                padding: 1rem 1.2rem;
+                margin-bottom: 0.75rem;
+                border-radius: 0 4px 4px 0;
+            ">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+                    <span style="font-weight:700; color:{PREG_NAVY}; font-size:1rem;">
+                        {row['project_name']}
+                    </span>
+                    <span style="
+                        background-color:{color};
+                        color:{WHITE};
+                        font-size:0.7rem;
+                        font-weight:700;
+                        letter-spacing:0.1em;
+                        padding:0.2rem 0.6rem;
+                        border-radius:3px;
+                    ">{label}</span>
+                </div>
+                <div style="color:#555; font-size:0.85rem; margin-bottom:0.4rem;">
+                    {row['city']}, {row['state']} &nbsp;|&nbsp; {row['asset_type']} &nbsp;|&nbsp;
+                    Variance: <strong>{variance_str}</strong> &nbsp;|&nbsp;
+                    Spent: ${row['actual_spend']:,.0f} of ${row['original_budget']:,.0f} budget &nbsp;|&nbsp;
+                    {int(row['change_orders_count'])} CO(s)
+                </div>
+                <div style="color:#333; font-size:0.88rem;">
+                    <strong>Recommended Action:</strong> {action}
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
