@@ -2,38 +2,53 @@ import streamlit as st
 import pandas as pd
 from styles.theme import section_banner, PREG_NAVY, WHITE
 
-_OVER_BUDGET_THRESHOLD = 0.05   # +5% = red
-_UNDER_PACED_THRESHOLD = -0.05  # -5% = yellow
-_CO_HIGH_THRESHOLD = 3          # 3+ change orders = flag
+_RED_THRESHOLD = 0.025    # |variance| >= 2.5% = red
+_YELLOW_THRESHOLD = 0.005 # |variance| >= 0.5% = yellow, else green
+_CO_HIGH_THRESHOLD = 3    # 3+ change orders = flag
 
 
 def _classify(row: pd.Series) -> tuple:
     v = row["variance_pct"]
     cos = row["change_orders_count"]
+    abs_v = abs(v)
 
-    if v > _OVER_BUDGET_THRESHOLD:
-        status = "Over Budget"
+    if abs_v >= _RED_THRESHOLD:
         color = "#C0392B"
         label = "RED"
-        if cos >= _CO_HIGH_THRESHOLD:
-            action = (
-                f"Variance +{v*100:.1f}% with {cos} COs — audit CO log for unapproved items, "
-                "hold next pay app pending PM sign-off, escalate to Adam."
-            )
+        if v > 0:
+            status = "Over Budget"
+            if cos >= _CO_HIGH_THRESHOLD:
+                action = (
+                    f"Variance +{v*100:.1f}% with {cos} COs — audit CO log for unapproved items, "
+                    "hold next pay app pending PM sign-off, escalate to Adam."
+                )
+            else:
+                action = (
+                    f"Variance +{v*100:.1f}% — review subcontractor billings against Schedule of Values, "
+                    "confirm no unapproved scope additions, flag before next pay app."
+                )
         else:
+            status = "Significantly Under-Paced"
             action = (
-                f"Variance +{v*100:.1f}% — review subcontractor billings against Schedule of Values, "
-                "confirm no unapproved scope additions, flag before next pay app."
+                f"Variance {v*100:.1f}% — contact GC immediately for updated schedule. "
+                "Determine if this is a billing lag or construction stoppage. "
+                "Notify asset management — cash flow projections and investor reporting may need revision."
             )
-    elif v < _UNDER_PACED_THRESHOLD:
-        status = "Under-Paced"
+    elif abs_v >= _YELLOW_THRESHOLD:
         color = "#E67E22"
         label = "YELLOW"
-        action = (
-            f"Variance {v*100:.1f}% — confirm with GC whether this is a billing lag "
-            "or construction delay. If delayed, update schedule and notify asset management "
-            "so cash flow projections stay accurate."
-        )
+        if v > 0:
+            status = "Slightly Over Budget"
+            action = (
+                f"Variance +{v*100:.1f}% — monitor closely. Confirm current billings match "
+                "approved scope before next pay app."
+            )
+        else:
+            status = "Slightly Under-Paced"
+            action = (
+                f"Variance {v*100:.1f}% — verify with GC that billing is current. "
+                "Watch for acceleration in upcoming pay apps."
+            )
     else:
         status = "On Track"
         color = "#27AE60"
@@ -51,19 +66,16 @@ def render_alerts_tab(df: pd.DataFrame) -> None:
         "Red = immediate attention. Yellow = monitor closely. Green = on track."
     )
 
-    red_threshold_pct = _OVER_BUDGET_THRESHOLD * 100
-    yellow_threshold_pct = abs(_UNDER_PACED_THRESHOLD) * 100
-
     col1, col2, col3 = st.columns(3)
-    red_count = int((df["variance_pct"] > _OVER_BUDGET_THRESHOLD).sum())
+    red_count = int((df["variance_pct"].abs() >= _RED_THRESHOLD).sum())
     yellow_count = int(
-        ((df["variance_pct"] <= _OVER_BUDGET_THRESHOLD) &
-         (df["variance_pct"] < _UNDER_PACED_THRESHOLD)).sum()
+        ((df["variance_pct"].abs() >= _YELLOW_THRESHOLD) &
+         (df["variance_pct"].abs() < _RED_THRESHOLD)).sum()
     )
     green_count = int(len(df) - red_count - yellow_count)
 
-    col1.metric("Immediate Action", f"{red_count} projects", delta=f">{red_threshold_pct:.0f}% over budget", delta_color="inverse")
-    col2.metric("Monitor Closely", f"{yellow_count} projects", delta=f">{yellow_threshold_pct:.0f}% under-paced", delta_color="inverse")
+    col1.metric("Immediate Action", f"{red_count} projects", delta=f"|variance| >= 2.5%", delta_color="inverse")
+    col2.metric("Monitor Closely", f"{yellow_count} projects", delta=f"|variance| 0.5–2.5%", delta_color="inverse")
     col3.metric("On Track", f"{green_count} projects")
 
     st.markdown("<br>", unsafe_allow_html=True)
