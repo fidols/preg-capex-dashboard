@@ -78,10 +78,36 @@ def render_alerts_tab(df: pd.DataFrame) -> None:
     col2.metric("Monitor Closely", f"{yellow_count} projects", delta=f"|variance| 0.5–2.5%", delta_color="inverse")
     col3.metric("On Track", f"{green_count} projects")
 
-    st.markdown("<br>", unsafe_allow_html=True)
+    sort_col, filter_col = st.columns([1, 1])
+    with sort_col:
+        sort_order = st.selectbox(
+            "Sort by variance",
+            options=["Highest to Lowest", "Lowest to Highest", "Red first"],
+            key="alerts_sort",
+        )
+    with filter_col:
+        status_filter = st.selectbox(
+            "Filter by status",
+            options=["All", "Red only", "Yellow only", "Green only"],
+            key="alerts_filter",
+        )
 
-    for _, row in df.sort_values("variance_pct", ascending=False).iterrows():
+    if sort_order == "Highest to Lowest":
+        sorted_df = df.sort_values("variance_pct", ascending=False)
+    elif sort_order == "Lowest to Highest":
+        sorted_df = df.sort_values("variance_pct", ascending=True)
+    else:
+        sorted_df = df.assign(_abs=df["variance_pct"].abs()).sort_values("_abs", ascending=False).drop(columns="_abs")
+
+    for _, row in sorted_df.iterrows():
         status, color, label, action = _classify(row)
+
+        if status_filter == "Red only" and label != "RED":
+            continue
+        if status_filter == "Yellow only" and label != "YELLOW":
+            continue
+        if status_filter == "Green only" and label != "GREEN":
+            continue
         variance_str = f"+{row['variance_pct']*100:.1f}%" if row["variance_pct"] > 0 else f"{row['variance_pct']*100:.1f}%"
 
         st.markdown(
