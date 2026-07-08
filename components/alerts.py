@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 from styles.theme import section_banner, PREG_NAVY, WHITE
 
-_RED_THRESHOLD = 0.025    # |variance| >= 2.5% = red
-_YELLOW_THRESHOLD = 0.005 # |variance| >= 0.5% = yellow, else green
+_RED_THRESHOLD = 0.05    # |variance| >= 5% = red
+_YELLOW_THRESHOLD = 0.025 # |variance| >= 2.5% = yellow, else green
 _CO_HIGH_THRESHOLD = 3    # 3+ change orders = flag
 
 
